@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		CD24F18A20A4DAA700B09E37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F18920A4DAA700B09E37 /* AppDelegate.swift */; };
-		CD24F18C20A4DAA700B09E37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F18B20A4DAA700B09E37 /* ViewController.swift */; };
 		CD24F18F20A4DAA700B09E37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD24F18D20A4DAA700B09E37 /* Main.storyboard */; };
 		CD24F19120A4DAA900B09E37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD24F19020A4DAA900B09E37 /* Assets.xcassets */; };
 		CD24F19420A4DAA900B09E37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD24F19220A4DAA900B09E37 /* LaunchScreen.storyboard */; };
+		CD24F19C20A4DB0500B09E37 /* CECoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F19B20A4DB0500B09E37 /* CECoordinator.swift */; };
+		CD24F19E20A4DB6600B09E37 /* CEMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F19D20A4DB6600B09E37 /* CEMainViewController.swift */; };
+		CD24F1A020A4DC4100B09E37 /* CESecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F19F20A4DC4100B09E37 /* CESecondaryViewController.swift */; };
+		CD24F1A420A4DEED00B09E37 /* CEStoryboardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1A320A4DEED00B09E37 /* CEStoryboardFactory.swift */; };
+		CD24F1A620A4E60800B09E37 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD24F1A520A4E60800B09E37 /* ViewController.storyboard */; };
+		CD24F1A820A4E91400B09E37 /* CENavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1A720A4E91400B09E37 /* CENavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD24F18620A4DAA700B09E37 /* CoordinatorExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD24F18920A4DAA700B09E37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD24F18B20A4DAA700B09E37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD24F18E20A4DAA700B09E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD24F19020A4DAA900B09E37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD24F19320A4DAA900B09E37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD24F19520A4DAA900B09E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD24F19B20A4DB0500B09E37 /* CECoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CECoordinator.swift; sourceTree = "<group>"; };
+		CD24F19D20A4DB6600B09E37 /* CEMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEMainViewController.swift; sourceTree = "<group>"; };
+		CD24F19F20A4DC4100B09E37 /* CESecondaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CESecondaryViewController.swift; sourceTree = "<group>"; };
+		CD24F1A320A4DEED00B09E37 /* CEStoryboardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEStoryboardFactory.swift; sourceTree = "<group>"; };
+		CD24F1A520A4E60800B09E37 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
+		CD24F1A720A4E91400B09E37 /* CENavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CENavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +65,13 @@
 			isa = PBXGroup;
 			children = (
 				CD24F18920A4DAA700B09E37 /* AppDelegate.swift */,
-				CD24F18B20A4DAA700B09E37 /* ViewController.swift */,
+				CD24F19B20A4DB0500B09E37 /* CECoordinator.swift */,
+				CD24F1A720A4E91400B09E37 /* CENavigationController.swift */,
+				CD24F19D20A4DB6600B09E37 /* CEMainViewController.swift */,
+				CD24F19F20A4DC4100B09E37 /* CESecondaryViewController.swift */,
+				CD24F1A320A4DEED00B09E37 /* CEStoryboardFactory.swift */,
 				CD24F18D20A4DAA700B09E37 /* Main.storyboard */,
+				CD24F1A520A4E60800B09E37 /* ViewController.storyboard */,
 				CD24F19020A4DAA900B09E37 /* Assets.xcassets */,
 				CD24F19220A4DAA900B09E37 /* LaunchScreen.storyboard */,
 				CD24F19520A4DAA900B09E37 /* Info.plist */,
@@ -125,6 +140,7 @@
 				CD24F19420A4DAA900B09E37 /* LaunchScreen.storyboard in Resources */,
 				CD24F19120A4DAA900B09E37 /* Assets.xcassets in Resources */,
 				CD24F18F20A4DAA700B09E37 /* Main.storyboard in Resources */,
+				CD24F1A620A4E60800B09E37 /* ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24F18C20A4DAA700B09E37 /* ViewController.swift in Sources */,
+				CD24F1A420A4DEED00B09E37 /* CEStoryboardFactory.swift in Sources */,
+				CD24F19E20A4DB6600B09E37 /* CEMainViewController.swift in Sources */,
+				CD24F1A820A4E91400B09E37 /* CENavigationController.swift in Sources */,
 				CD24F18A20A4DAA700B09E37 /* AppDelegate.swift in Sources */,
+				CD24F1A020A4DC4100B09E37 /* CESecondaryViewController.swift in Sources */,
+				CD24F19C20A4DB0500B09E37 /* CECoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
