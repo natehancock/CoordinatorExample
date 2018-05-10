@@ -8,33 +8,6 @@
 
 import UIKit
 
-struct CEMainViewControllerModel {
-    var leftValue: Int
-    var rightValue: Int
-}
-
-
-enum CEOperator {
-
-    case add
-    case divide
-    case subtract
-    case multiply
-    
-    var description: String {
-        switch self {
-        case .add:
-            return "+"
-        case .divide:
-            return "/"
-        case .subtract:
-            return "-"
-        case .multiply:
-            return "*"
-        }
-    }
-}
-
 protocol CEMainViewControllerDelegate {
     func mainViewControllerDidSelect(_ op: CEOperator, _ model: CEMainViewControllerModel)
 }
@@ -43,7 +16,6 @@ class CEMainViewController: UIViewController {
     
     @IBOutlet weak var rightLabel: UILabel!
     @IBOutlet weak var leftLabel: UILabel!
-    @IBOutlet weak var centerLabel: UILabel!
     
 
     var delegate: CEMainViewControllerDelegate!

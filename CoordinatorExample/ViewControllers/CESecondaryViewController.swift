@@ -9,11 +9,7 @@
 import Foundation
 import UIKit
 
-struct CESecondaryModel {
-    var result: Int!
-    var op: CEOperator!
-    var mainModel: CEMainViewControllerModel!
-}
+
 
 protocol CESecondaryViewControllerDelegate {
     
