@@ -9,17 +9,51 @@
 import UIKit
 
 
+/**
+    CECoordinator
+ 
+    Purpose
+    1. Keep track of the view heirarchy
+    2. Manage changing view controllers
+ 
+    Description - Conforms to a delegate from each View Controller.
+ */
+
 class CECoordinator: NSObject {
     
     var navController: UINavigationController!
+    var storyboardFactory = CEStoryboardFactory()
+    
+    override init() {
+        super.init()
+        navController = storyboardFactory.navigationController()
+        
+        let model = CEMainViewControllerModel(leftValue: 30, rightValue: 20)
+        let mainViewController = storyboardFactory.CEMainViewController(model: model, coordinator: self)
+        
+        //set view controller on Nav Controller to be the main landing page.
+        navController.setViewControllers([mainViewController], animated: false)
+    }
 
     private func presentSecondaryViewController(model: CESecondaryModel) {
-        let secondaryViewController = CEStoryboardFactory.shared.CESecondaryViewController(model: model, coordinator: self)
+        let secondaryViewController = storyboardFactory.CESecondaryViewController(model: model, coordinator: self)
         navController.pushViewController(secondaryViewController, animated: true)
+    }
+    
+    private func presentModalViewController() {
+        let modalVC = storyboardFactory.CEModalViewController()
+        modalVC.modalPresentationStyle = .overCurrentContext
+        navController.present(modalVC, animated: true, completion: nil)
     }
 }
 
+
+//MARK: - CEMainViewControllerDelegate
 extension CECoordinator : CEMainViewControllerDelegate {
+    
+    func didSelectModalButton() {
+        presentModalViewController()
+    }
     
     func mainViewControllerDidSelect(_ op: CEOperator, _ model: CEMainViewControllerModel) {
         
@@ -42,7 +76,9 @@ extension CECoordinator : CEMainViewControllerDelegate {
     }
 }
 
-
+//MARK: - CESecondaryViewControllerDelegate
 extension CECoordinator : CESecondaryViewControllerDelegate {
-    
+    func didSelectModal() {
+        presentModalViewController()
+    }
 }

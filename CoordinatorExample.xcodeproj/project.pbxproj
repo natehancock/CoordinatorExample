@@ -20,6 +20,8 @@
 		CD24F1AD20A4F07500B09E37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1AC20A4F07500B09E37 /* Constants.swift */; };
 		CD24F1B020A4F0C900B09E37 /* CEMainViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1AF20A4F0C900B09E37 /* CEMainViewControllerModel.swift */; };
 		CD24F1B220A4F0E100B09E37 /* CESecondaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1B120A4F0E100B09E37 /* CESecondaryModel.swift */; };
+		CD24F1B420A4FCD000B09E37 /* Modal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD24F1B320A4FCD000B09E37 /* Modal.storyboard */; };
+		CD24F1B620A4FCE900B09E37 /* CEModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24F1B520A4FCE900B09E37 /* CEModalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		CD24F1AC20A4F07500B09E37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CD24F1AF20A4F0C900B09E37 /* CEMainViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEMainViewControllerModel.swift; sourceTree = "<group>"; };
 		CD24F1B120A4F0E100B09E37 /* CESecondaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CESecondaryModel.swift; sourceTree = "<group>"; };
+		CD24F1B320A4FCD000B09E37 /* Modal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Modal.storyboard; sourceTree = "<group>"; };
+		CD24F1B520A4FCE900B09E37 /* CEModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEModalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				CD24F1A320A4DEED00B09E37 /* CEStoryboardFactory.swift */,
-				CD24F1A520A4E60800B09E37 /* ViewController.storyboard */,
 				CD24F18D20A4DAA700B09E37 /* Main.storyboard */,
+				CD24F1A520A4E60800B09E37 /* ViewController.storyboard */,
+				CD24F1B320A4FCD000B09E37 /* Modal.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			children = (
 				CD24F19D20A4DB6600B09E37 /* CEMainViewController.swift */,
 				CD24F19F20A4DC4100B09E37 /* CESecondaryViewController.swift */,
+				CD24F1B520A4FCE900B09E37 /* CEModalViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD24F19420A4DAA900B09E37 /* LaunchScreen.storyboard in Resources */,
+				CD24F1B420A4FCD000B09E37 /* Modal.storyboard in Resources */,
 				CD24F19120A4DAA900B09E37 /* Assets.xcassets in Resources */,
 				CD24F18F20A4DAA700B09E37 /* Main.storyboard in Resources */,
 				CD24F1A620A4E60800B09E37 /* ViewController.storyboard in Resources */,
@@ -194,6 +201,7 @@
 			files = (
 				CD24F1A420A4DEED00B09E37 /* CEStoryboardFactory.swift in Sources */,
 				CD24F19E20A4DB6600B09E37 /* CEMainViewController.swift in Sources */,
+				CD24F1B620A4FCE900B09E37 /* CEModalViewController.swift in Sources */,
 				CD24F1A820A4E91400B09E37 /* CENavigationController.swift in Sources */,
 				CD24F18A20A4DAA700B09E37 /* AppDelegate.swift in Sources */,
 				CD24F1AD20A4F07500B09E37 /* Constants.swift in Sources */,

@@ -10,6 +10,7 @@ import UIKit
 
 protocol CEMainViewControllerDelegate {
     func mainViewControllerDidSelect(_ op: CEOperator, _ model: CEMainViewControllerModel)
+    func didSelectModalButton()
 }
 
 class CEMainViewController: UIViewController {
@@ -30,6 +31,9 @@ class CEMainViewController: UIViewController {
     }
 
     
+    @IBAction func modalButton(sender: UIButton) {
+        delegate.didSelectModalButton()
+    }
     
     @IBAction func didSelectAdd(sender: UIButton) {
         delegate.mainViewControllerDidSelect(.add, model)

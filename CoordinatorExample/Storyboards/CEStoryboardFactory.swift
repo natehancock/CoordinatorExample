@@ -9,18 +9,25 @@
 import Foundation
 import UIKit
 
+
+//Factory - Used for initializing View Controllers and handling dependencies
 class CEStoryboardFactory {
-    static let shared = CEStoryboardFactory()
     
     enum storyboardId: String {
         case main = "Main"
         case viewController = "ViewController"
+        case modal = "Modal"
     }
     
     enum viewControllerId: String {
         case main = "CEMainViewController"
         case secondary = "CESecondaryViewController"
         case navigation = "CENavigationController"
+        case modal = "CEModalViewController"
+    }
+    
+    private func viewController(storyboardId: String, viewControllerId: String) -> UIViewController {
+        return UIStoryboard.init(name: storyboardId, bundle: nil).instantiateViewController(withIdentifier: viewControllerId)
     }
     
     func navigationController() -> CENavigationController {
@@ -57,6 +64,12 @@ class CEStoryboardFactory {
         
         //return VC
         return vc
+    }
+    
+    func CEModalViewController() -> CEModalViewController {
+        let modal = viewController(storyboardId: storyboardId.modal.rawValue, viewControllerId: viewControllerId.modal.rawValue) as! CEModalViewController
+        
+        return modal
     }
     
     

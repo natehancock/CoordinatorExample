@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal View Controller-->
+        <scene sceneID="JDf-Rw-FwU">
+            <objects>
+                <viewController storyboardIdentifier="CEModalViewController" id="OwV-wc-Qwz" customClass="CEModalViewController" customModule="CoordinatorExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UC3-x3-Qhf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AdS-8X-P3i">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTk-5O-AXQ">
+                                <rect key="frame" x="93.5" y="250" width="187.5" height="187.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqq-wa-z5C">
+                                        <rect key="frame" x="70" y="83.5" width="48" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qqq-wa-z5C" firstAttribute="centerX" secondItem="tTk-5O-AXQ" secondAttribute="centerX" id="SZC-1r-xZm"/>
+                                    <constraint firstAttribute="width" secondItem="tTk-5O-AXQ" secondAttribute="height" multiplier="1:1" id="VQ5-EF-zhy"/>
+                                    <constraint firstItem="qqq-wa-z5C" firstAttribute="centerY" secondItem="tTk-5O-AXQ" secondAttribute="centerY" id="ZZl-wj-2BD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vFc-kn-wQD" firstAttribute="bottom" secondItem="AdS-8X-P3i" secondAttribute="bottom" id="9eB-RQ-04g"/>
+                            <constraint firstItem="AdS-8X-P3i" firstAttribute="leading" secondItem="vFc-kn-wQD" secondAttribute="leading" id="J5Q-eS-Sjg"/>
+                            <constraint firstItem="tTk-5O-AXQ" firstAttribute="centerX" secondItem="vFc-kn-wQD" secondAttribute="centerX" id="Rto-NP-xw9"/>
+                            <constraint firstItem="tTk-5O-AXQ" firstAttribute="centerY" secondItem="vFc-kn-wQD" secondAttribute="centerY" id="T6P-0B-40E"/>
+                            <constraint firstItem="vFc-kn-wQD" firstAttribute="trailing" secondItem="AdS-8X-P3i" secondAttribute="trailing" id="bVq-FG-HtL"/>
+                            <constraint firstItem="tTk-5O-AXQ" firstAttribute="width" secondItem="UC3-x3-Qhf" secondAttribute="width" multiplier="1:2" id="pYd-ID-TEe"/>
+                            <constraint firstItem="AdS-8X-P3i" firstAttribute="top" secondItem="vFc-kn-wQD" secondAttribute="top" id="xE7-L9-SAG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vFc-kn-wQD"/>
+                    </view>
+                    <connections>
+                        <outlet property="fadeView" destination="AdS-8X-P3i" id="KZp-I3-e4U"/>
+                        <outlet property="modalView" destination="tTk-5O-AXQ" id="igd-bC-P4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="veO-iZ-Qva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="159"/>
+        </scene>
+    </scenes>
+</document>

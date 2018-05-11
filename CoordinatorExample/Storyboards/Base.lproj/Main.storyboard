@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,54 +19,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-xS-uNX">
-                                <rect key="frame" x="84" y="194" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUT-xS-uNX">
+                                <rect key="frame" x="86.5" y="325.5" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkq-Bv-xRp">
-                                <rect key="frame" x="247" y="194" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkq-Bv-xRp">
+                                <rect key="frame" x="217.5" y="325" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Tt-SBq">
-                                <rect key="frame" x="50" y="525" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="add"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="cRR-M4-142">
+                                <rect key="frame" x="46" y="401.5" width="283" height="109"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-Tt-SBq">
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="109"/>
+                                        <state key="normal" title="add"/>
+                                        <connections>
+                                            <action selector="didSelectAddWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="hcl-bz-xzG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDG-rE-bGc">
+                                        <rect key="frame" x="75" y="0.0" width="58" height="109"/>
+                                        <state key="normal" title="subtract"/>
+                                        <connections>
+                                            <action selector="didSelectSubtractWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="peD-zh-bXn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-jw-ely">
+                                        <rect key="frame" x="150" y="0.0" width="58" height="109"/>
+                                        <state key="normal" title="multiply"/>
+                                        <connections>
+                                            <action selector="didSelectMultiplyWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="RFD-3d-ZkF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-YA-4QE">
+                                        <rect key="frame" x="225" y="0.0" width="58" height="109"/>
+                                        <state key="normal" title="divide"/>
+                                        <connections>
+                                            <action selector="didSelectDivideWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="A9h-nC-aQb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="LeK-eW-9Bt"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ooz-8q-NDB">
+                                <rect key="frame" x="166" y="550.5" width="43" height="30"/>
+                                <state key="normal" title="Modal"/>
                                 <connections>
-                                    <action selector="didSelectAddWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="hcl-bz-xzG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDG-rE-bGc">
-                                <rect key="frame" x="119" y="525" width="58" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="subtract"/>
-                                <connections>
-                                    <action selector="didSelectSubtractWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="peD-zh-bXn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-jw-ely">
-                                <rect key="frame" x="194" y="525" width="54" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="multiply"/>
-                                <connections>
-                                    <action selector="didSelectMultiplyWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="RFD-3d-ZkF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-YA-4QE">
-                                <rect key="frame" x="282" y="525" width="42" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="divide"/>
-                                <connections>
-                                    <action selector="didSelectDivideWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="A9h-nC-aQb"/>
+                                    <action selector="modalButtonWithSender:" destination="D5k-Hb-l6c" eventType="touchUpInside" id="Uyo-P2-L7g"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cRR-M4-142" firstAttribute="centerX" secondItem="N6C-yc-Iyw" secondAttribute="centerX" id="3l1-m3-vMW"/>
+                            <constraint firstItem="Ooz-8q-NDB" firstAttribute="centerX" secondItem="cRR-M4-142" secondAttribute="centerX" id="JI4-Ym-wsk"/>
+                            <constraint firstItem="MUT-xS-uNX" firstAttribute="centerY" secondItem="N6C-yc-Iyw" secondAttribute="centerY" id="N7j-vc-5ZV"/>
+                            <constraint firstItem="cRR-M4-142" firstAttribute="top" secondItem="MUT-xS-uNX" secondAttribute="bottom" constant="40" id="Nfl-8s-4Co"/>
+                            <constraint firstItem="N6C-yc-Iyw" firstAttribute="centerX" secondItem="MUT-xS-uNX" secondAttribute="trailing" constant="30" id="QBc-Fw-ANy"/>
+                            <constraint firstItem="Ooz-8q-NDB" firstAttribute="top" secondItem="cRR-M4-142" secondAttribute="bottom" constant="40" id="g4q-fI-8RF"/>
+                            <constraint firstItem="pkq-Bv-xRp" firstAttribute="centerY" secondItem="MUT-xS-uNX" secondAttribute="centerY" id="lX4-GI-ag9"/>
+                            <constraint firstItem="pkq-Bv-xRp" firstAttribute="leading" secondItem="N6C-yc-Iyw" secondAttribute="centerX" constant="30" id="ovH-Oh-YYo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N6C-yc-Iyw"/>
                     </view>
                     <navigationItem key="navigationItem" id="6YS-aF-F8d"/>
@@ -76,7 +96,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl3-Z6-8kj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="710" y="0.0"/>
+            <point key="canvasLocation" x="768.79999999999995" y="-1.3493253373313345"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8go-nA-U5j">

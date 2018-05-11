@@ -12,7 +12,7 @@ import UIKit
 
 
 protocol CESecondaryViewControllerDelegate {
-    
+    func didSelectModal()
 }
 
 class CESecondaryViewController: UIViewController {
@@ -36,6 +36,10 @@ class CESecondaryViewController: UIViewController {
         resultLabel.text = String(model!.result)
     }
     
+    
+    @IBAction func didSelectModalButton(sender: UIButton) {
+        delegate.didSelectModal()
+    }
     
     
 }

@@ -17,18 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let model = CEMainViewControllerModel(leftValue: 30, rightValue: 20)
-        
         let coordinator = CECoordinator()
         
-        //set Nav controller. Can be customized in Storyboard
-        coordinator.navController = CEStoryboardFactory.shared.navigationController()
         
-        
-        let mainViewController = CEStoryboardFactory.shared.CEMainViewController(model: model, coordinator: coordinator)
-        
-        //set view controller on Nav Controller to be the main landing page.
-        coordinator.navController.setViewControllers([mainViewController], animated: false)
+
         
         //Set the Coordinator to be the RootVC
         window = UIWindow(frame: UIScreen.main.bounds)
